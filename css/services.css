@@ -1,0 +1,450 @@
+:root {
+    --primary-color: #6366f1;
+    --primary-dark: #4f46e5;
+    --secondary-color: #ec4899;
+
+
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --gradient-dark: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+
+    --bg-primary: #0f0f1e;
+    --bg-secondary: #1a1a2e;
+    --bg-tertiary: #16213e;
+
+    --text-primary: #ffffff;
+    --text-secondary: #b4b4c8;
+    --text-muted: #6b7280;
+}
+
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 100px 0;
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* HERO */
+.hero-section {
+    background: var(--gradient-dark);
+    text-align: center;
+    padding: 60px 20px;
+    /* add padding for spacing on smaller screens */
+}
+
+.hero-icon {
+    font-size: clamp(40px, 8vw, 64px);
+    /* scales between 40px and 64px */
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(28px, 6vw, 56px);
+    /* scales smoothly */
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    max-width: 720px;
+    margin: auto;
+    font-size: clamp(14px, 2.5vw, 18px);
+    /* adjusts for smaller screens */
+    color: var(--text-secondary);
+    padding: 0 10px;
+    /* prevent text touching edges */
+}
+
+/* Extra fine-tuning with media queries */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 40px 15px;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-icon {
+        font-size: 40px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+    }
+}
+
+/* SERVICES */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-box {
+    background: var(--bg-secondary);
+    border-radius: 20px;
+    padding: 51px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+}
+
+.service-box i {
+    font-size: 38px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.service-box h3 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    color: var(--text-muted);
+}
+
+/* PROCESS */
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.process-step {
+    background: var(--gradient-primary);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+}
+
+.process-step span {
+    font-size: 32px;
+    font-weight: 800;
+    /* color: var(--accent-color); */
+}
+
+.process-step p {
+    color: rgb(231, 222, 222);
+}
+
+.process-step h4 {
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* CTA */
+.cta-section {
+    background: var(--bg-tertiary);
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    background: var(--gradient-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cta-section p {
+    margin: 15px 0 35px;
+    color: var(--text-secondary);
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 38px;
+    background: var(--gradient-accent);
+    color: #000;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Scroll Reveal Base */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+/* When visible */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* navbar  */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 20px 0;
+    transition: all var(--transition-fast);
+    background: transparent;
+}
+
+.navbar.scrolled {
+    background: rgba(15, 15, 30, 0.95);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    padding: 15px 0;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+}
+
+.logo i {
+    font-size: 2rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rotate3d 10s linear infinite;
+}
+
+@keyframes rotate3d {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    font-weight: 500;
+    position: relative;
+    transition: color var(--transition-fast);
+    text-decoration: none;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    transition: width var(--transition-fast);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: white;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+    transition: var(--transition-fast);
+}
+
+/* Default desktop styles (already in your code) */
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .nav-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /* Show hamburger toggle */
+    .nav-toggle {
+        display: flex;
+    }
+
+    /* Hide nav links initially */
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 20px;
+        background: rgba(15, 15, 30, 0.95);
+        backdrop-filter: blur(20px);
+        padding: 20px;
+        transform: translateY(-200%);
+        opacity: 0;
+        pointer-events: none;
+        text-decoration: none;
+        transition: all var(--transition-fast);
+    }
+
+    /* When active (JS will toggle this class) */
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
+
+
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+h4 {
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+}
+
+
+
+/* Dropdown  */
+
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+/* Dropdown menu hidden by default */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(15, 15, 30, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    padding: 10px 0;
+    min-width: 180px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+
+.dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+ul {
+    list-style: none;
+}
