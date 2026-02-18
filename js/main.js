@@ -409,13 +409,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // DYNAMIC YEAR IN FOOTER
   // ===================================
 
-  const currentYear = new Date().getFullYear();
-  const yearElements = document.querySelectorAll(".footer-bottom p");
-  yearElements.forEach((element) => {
-    if (element.textContent.includes("2024")) {
-      element.textContent = element.textContent.replace("2024", currentYear);
-    }
-  });
+  // const currentYear = new Date().getFullYear();
+  // const yearElements = document.querySelectorAll(".footer-bottom p");
+  // yearElements.forEach((element) => {
+  //   if (element.textContent.includes("2024")) {
+  //     element.textContent = element.textContent.replace("2024", currentYear);
+  //   }
+  // });
 
   // ===================================
   // INTERACTIVE PORTFOLIO ITEMS

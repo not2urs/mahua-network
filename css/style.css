@@ -13,7 +13,7 @@
     --accent-color: #f59e0b;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+    --gradient-primary: linear-gradient(135deg,#0f172a, #1e293b);
     --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
     --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
     --gradient-dark: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
@@ -129,7 +129,7 @@ img {
 }
 
 .gradient-text {
-    background: var(--gradient-primary);
+    background: var(--text-primary);
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent;
      background-clip: text;
@@ -357,8 +357,11 @@ img {
     right: 0;
     bottom: 0;
     z-index: 0;
-    background: radial-gradient(circle at 30% 30%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 70% 70%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+    background:
+    radial-gradient(circle at 25% 25%, rgba(147, 51, 234, 0.20) 0%, transparent 55%),
+    radial-gradient(circle at 80% 70%, rgba(255, 221, 51, 0.22) 0%, transparent 60%),
+    linear-gradient(135deg, #140f2d, #2a1e5c);
+
 }
 
 .floating-shapes {
@@ -535,7 +538,7 @@ img {
     }
 }
 
-.cube-face {
+/* .cube-face {
     position: absolute;
     width: 300px;
     height: 300px;
@@ -545,9 +548,9 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 
-.cube-face.front {
+/* .cube-face.front {
     transform: translateZ(150px);
 }
 
@@ -569,6 +572,51 @@ img {
 
 .cube-face.bottom {
     transform: rotateX(-90deg) translateZ(150px);
+} */
+ .cube-face {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-color: #c5f866;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* IMPORTANT: Depth = half of width (300/2 = 150px) */
+
+.cube-face.front  {
+    transform: translateZ(150px);
+    background-image: url("../img/cropped-Mahua-network-scaled-1-1536x1501.png");
+}
+
+.cube-face.back   {
+    transform: rotateY(180deg) translateZ(150px);
+    background-image: url("../img/cropped-Mahua-network-scaled-1-1536x1501.png");
+}
+
+.cube-face.right  {
+    transform: rotateY(90deg) translateZ(150px);
+    background-image: url("../img/cropped-Mahua-network-scaled-1-1536x1501.png");
+}
+
+.cube-face.left   {
+    transform: rotateY(-90deg) translateZ(150px);
+    background-image: url("../img/cropped-Mahua-network-scaled-1-1536x1501.png");
+}
+
+.cube-face.top    {
+    transform: rotateX(90deg) translateZ(150px);
+    background-image: url("../img/cropped-Mahua-network-scaled-1-1536x1501.png");
+}
+
+.cube-face.bottom {
+    transform: rotateX(-90deg) translateZ(150px);
+    background-image: url("../img/cropped-Mahua-network-scaled-1-1536x1501.png");
+}
+
+/* Optional: Pause on hover */
+.cube:hover {
+    animation-play-state: paused;
 }
 
 /* === FLOATING CARDS === */
@@ -594,20 +642,22 @@ img {
 
 .float-card i {
     font-size: 2rem;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #ddec08;
+    text-shadow: 0 0 15px rgba(99, 102, 241, 0.7);
 }
 
 .float-card span {
     font-weight: 600;
-    font-size: 0.875rem;
+    font-size: 1rem;
+    color:#000000
+     
 }
 
 .card-1 {
     top: 10%;
     left: -10%;
     animation-delay: 0s;
+   
 }
 
 .card-2 {
@@ -836,7 +886,7 @@ img {
 }
 
 .service-card {
-    padding: 40px;
+    padding: 0; /* remove inner spacing */
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: var(--radius-lg);
@@ -844,6 +894,7 @@ img {
     position: relative;
     overflow: hidden;
     transform-style: preserve-3d;
+    height: 550px; /* control card height */
 }
 
 .service-card::before {
@@ -858,6 +909,16 @@ img {
     transition: opacity var(--transition-smooth);
 }
 
+
+.service-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+}
 .service-card:hover {
     transform: translateY(-10px) rotateX(5deg);
     box-shadow: var(--shadow-3d);
@@ -869,34 +930,52 @@ img {
 }
 
 .service-icon {
-    width: 80px;
-    height: 80px;
-    background: var(--gradient-primary);
-    border-radius: var(--radius-md);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 24px;
-    font-size: 2rem;
-    color: white;
-    box-shadow: var(--shadow-glow);
-    transition: transform var(--transition-fast);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: none; /* remove gradient background */
+    box-shadow: none;
+}
+
+.service-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: obtain;
 }
 
 .service-card:hover .service-icon {
     transform: scale(1.1) rotateY(180deg);
 }
 
-.service-title {
-    font-size: 1.5rem;
-    margin-bottom: 16px;
+.service-title,
+.service-description {
+    position: absolute;
+    left: 20px;
+    color: #fff;
+    z-index: 2;
 }
 
-.service-description {
-    color: var(--text-secondary);
-    margin-bottom: 24px;
-    line-height: 1.8;
+/* Name (Less Bold) */
+.service-title {
+    bottom: 55px;
+    margin: 0;
+    font-weight: 500;     /* reduced from bold */
+    font-size: 1.3rem;    /* slightly refined */
+    letter-spacing: 0.5px;
 }
+
+/* Designation */
+.service-description {
+    bottom: 28px;
+    margin: 0;
+    font-weight: 400;     /* normal weight */
+    font-size: 0.95rem;
+    font-style: italic;
+    opacity: 0.85;        /* softer look */
+}
+
 
 .service-features {
     margin-bottom: 24px;
@@ -1554,7 +1633,7 @@ select option {
     padding-left: 5px;
 }
 
-.newsletter-form {
+/* .newsletter-form {
     display: flex;
     gap: 8px;
     margin-bottom: 24px;
@@ -1588,7 +1667,7 @@ select option {
 
 .newsletter-form button:hover {
     transform: scale(1.05);
-}
+} */
 
 .footer-contact {
     display: flex;
@@ -2483,7 +2562,12 @@ select option {
     margin-top: 40px;
 }
 
-
+.playstore-link.vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
 
 /* popup  */
 .popup-overlay {
