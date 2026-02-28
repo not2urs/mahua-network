@@ -2065,6 +2065,16 @@ select option {
     margin-bottom: 30px;
     text-align: center;
 }
+.ott-social{
+    line-height: 4;
+     font-size: 18px;
+    font-weight: 600;
+    color: #f0f0f0;
+    margin-bottom: 20px;
+    
+    /* justify-content: flex-start; */
+
+}
 
 .app-btn {
     display: inline-block;
