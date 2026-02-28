@@ -41,34 +41,40 @@
     <section class="portfolio" id="portfolio">
         <div class="gallery">
             <div class="section-header" data-aos="fade-up">
-                
+
                 <span class="section-tag">Our Gallery</span>
                 <p class="section-description">
                     Welcome to our gallery — a space where we celebrate dynamic events, digital productions, and
                     creative milestones. Each moment is a reflection of vision, execution, and excellence.
                 </p>
             </div>
-
+            
             <div class="portfolio-grid">
-
+                
+                <!-- Popup -->
+                <div class="image-popup" id="imagePopup">
+                    <span class="close-btn" onclick="closePopup()">×</span>
+                    <img id="popupImg" onclick="closePopup()">
+                </div>
                 <!-- image-1 -->
                 <div class="portfolio-item" data-category="web" data-aos="fade-up">
 
                     <div class="portfolio-image">
                         <div class="portfolio-placeholder">
-                            <img src="img/IMG_1.JPG" alt="">
+                            <img src="../img/IMG_1.JPG" alt="" onclick="openPopup(this.src)">
                         </div>
 
                     </div>
 
                 </div>
 
+
                 <!-- image-2-->
                 <div class="portfolio-item" data-category="app" data-aos="fade-up" data-aos-delay="100">
 
                     <div class="portfolio-image">
                         <div class="portfolio-placeholder">
-                            <img src="img/IMG_1.JPG" alt="">
+                            <img src="../img/IMG_1.JPG" alt="" onclick="openPopup(this.src)">
                         </div>
 
                     </div>
@@ -80,7 +86,7 @@
 
                     <div class="portfolio-image">
                         <div class="portfolio-placeholder">
-                            <img src="img/IMG_1.JPG" alt="">
+                            <img src="../img/IMG_1.JPG" alt="" onclick="openPopup(this.src)">
                         </div>
 
                     </div>
@@ -91,7 +97,7 @@
                 <div class="portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="300">
                     <div class="portfolio-image">
                         <div class="portfolio-placeholder">
-                            <img src="img/IMG_1.JPG" alt="">
+                            <img src="../img/IMG_1.JPG" alt="" onclick="openPopup(this.src)">
                         </div>
 
                     </div>
@@ -102,7 +108,7 @@
 
                     <div class="portfolio-image">
                         <div class="portfolio-placeholder">
-                            <img src="img/IMG_1.JPG" alt="">
+                            <img src="../img/IMG_1.JPG" alt="" onclick="openPopup(this.src)">
                         </div>
 
                     </div>
@@ -114,7 +120,7 @@
 
                     <div class="portfolio-image">
                         <div class="portfolio-placeholder">
-                            <img src="img/IMG_1.JPG" alt="">
+                            <img src="../img/IMG_1.JPG" alt="" onclick="openPopup(this.src)">
                         </div>
 
                     </div>
@@ -126,7 +132,7 @@
 
                     <div class="portfolio-image">
                         <div class="portfolio-placeholder">
-                            <img src="img/IMG_1.JPG" alt="">
+                            <img src="../img/IMG_1.JPG" alt="" onclick="openPopup(this.src)">
                         </div>
 
                     </div>
@@ -138,7 +144,7 @@
 
                     <div class="portfolio-image">
                         <div class="portfolio-placeholder">
-                            <img src="img/IMG_1.JPG" alt="">
+                            <img src="../img/IMG_1.JPG" alt="" onclick="openPopup(this.src)">
                         </div>
 
                     </div>
@@ -150,7 +156,7 @@
 
                     <div class="portfolio-image">
                         <div class="portfolio-placeholder">
-                            <img src="img/IMG_1.JPG" alt="">
+                            <img src="../img/IMG_1.JPG" alt="" onclick="openPopup(this.src)">
                         </div>
 
                     </div>
@@ -162,7 +168,7 @@
                 <div class="portfolio-item" data-category="ml" data-aos="fade-up" data-aos-delay="500">
                     <div class="portfolio-image">
                         <div class="portfolio-placeholder">
-                            <img src="img/IMG_1.JPG" alt="">
+                            <img src="../img/IMG_1.JPG" alt="" onclick="openPopup(this.src)">
                         </div>
 
                     </div>
@@ -173,7 +179,7 @@
                 <div class="portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="300">
                     <div class="portfolio-image">
                         <div class="portfolio-placeholder">
-                            <img src="img/IMG_1.JPG" alt="">
+                            <img src="../img/IMG_1.JPG" alt="" onclick="openPopup(this.src)">
                         </div>
 
                     </div>
@@ -184,7 +190,7 @@
                 <div class="portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="300">
                     <div class="portfolio-image">
                         <div class="portfolio-placeholder">
-                            <img src="img/IMG_1.JPG" alt="">
+                            <img src="../img/IMG_1.JPG" alt="" onclick="openPopup(this.src)">
                         </div>
 
                     </div>
@@ -194,8 +200,21 @@
         </div>
     </section>
 
-
     <script src="../js/main.js"></script>
 </body>
+
+<script>
+    function openPopup(src) {
+        const popup = document.getElementById("imagePopup");
+        const popupImg = document.getElementById("popupImg");
+
+        popupImg.src = src;
+        popup.classList.add("active");
+    }
+
+    function closePopup() {
+        document.getElementById("imagePopup").classList.remove("active");
+    }
+</script>
 
 </html>
