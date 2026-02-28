@@ -633,3 +633,38 @@ window.addEventListener("load", () => {
         document.getElementById("imagePopup").classList.remove("active");
     }
     
+
+    // gallery scrollbar 
+    document.addEventListener("DOMContentLoaded", function () {
+
+    const slider = document.getElementById("sliderWrapper");
+    const images = slider.querySelectorAll("img");
+
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    let index = 0;
+
+    function updateSlider() {
+        slider.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    nextBtn.addEventListener("click", function () {
+        index++;
+        if (index >= images.length) index = 0;
+        updateSlider();
+    });
+
+    prevBtn.addEventListener("click", function () {
+        index--;
+        if (index < 0) index = images.length - 1;
+        updateSlider();
+    });
+
+    setInterval(() => {
+    index++;
+    if (index >= images.length) index = 0;
+    updateSlider();
+}, 3000);
+
+});

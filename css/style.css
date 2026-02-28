@@ -2778,3 +2778,42 @@ select option {
     font-weight: bolder;
     color: green;
 }
+
+
+
+/* gallery inside  */
+.image-slider {
+    position: relative;
+    width: 98%;
+    /* height:800px; */
+    overflow: hidden;
+    margin: auto;
+    border-radius:10px ;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slider-wrapper img {
+    width: 100%;
+    flex: 0 0 100%;
+    object-fit: cover;
+}
+
+/* Buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
