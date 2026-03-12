@@ -9,9 +9,9 @@
     --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
     --gradient-dark: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
 
-    --bg-primary: #0f0f1e;
-    --bg-secondary: #1a1a2e;
-    --bg-tertiary: #16213e;
+    --bg-primary: #000000;
+    --bg-secondary: #06060a;
+    --bg-tertiary: #000000;
 
     --text-primary: #ffffff;
     --text-secondary: #b4b4c8;

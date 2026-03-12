@@ -2065,7 +2065,7 @@ select option {
 
 /* ===== OTT SECTION BASE ===== */
 .app-section {
-    background: var(--bg-secondary);
+    background: black;
     padding: 80px 20px;
     overflow: hidden;
 
