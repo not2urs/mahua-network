@@ -642,14 +642,14 @@ img {
 
 .float-card i {
     font-size: 2rem;
-    color: #ddec08;
+    color: hsl(233, 33%, 47%);
     text-shadow: 0 0 15px rgba(99, 102, 241, 0.7);
 }
 
 .float-card span {
     font-weight: 600;
     font-size: 1rem;
-    color: #000000
+    color: white;
 }
 
 .card-1 {
