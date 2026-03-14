@@ -235,59 +235,59 @@ document.addEventListener("DOMContentLoaded", function () {
   // CONTACT FORM HANDLING
   // ===================================
 
-  const contactForm = document.getElementById("contactForm");
-  const formMessage = document.getElementById("formMessage");
+  // const contactForm = document.getElementById("contactForm");
+  // const formMessage = document.getElementById("formMessage");
 
-  contactForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+  // contactForm.addEventListener("submit", function (e) {
+  //   e.preventDefault();
 
-    // Get form data
-    const formData = new FormData(contactForm);
-    const data = {};
-    formData.forEach((value, key) => {
-      data[key] = value;
-    });
+  //   // Get form data
+  //   const formData = new FormData(contactForm);
+  //   const data = {};
+  //   formData.forEach((value, key) => {
+  //     data[key] = value;
+  //   });
 
-    // Simulate form submission (replace with actual API call)
-    formMessage.textContent = "Sending your message...";
-    formMessage.className = "form-message";
-    formMessage.style.display = "block";
+  //   // Simulate form submission (replace with actual API call)
+  //   formMessage.textContent = "Sending your message...";
+  //   formMessage.className = "form-message";
+  //   formMessage.style.display = "block";
 
-    // Simulate API delay
-    setTimeout(() => {
-      // Success message
-      formMessage.textContent =
-        "Thank you! Your message has been sent successfully. We will get back to you soon.";
-      formMessage.className = "form-message success";
+  //   // Simulate API delay
+  //   setTimeout(() => {
+  //     // Success message
+  //     formMessage.textContent =
+  //       "Thank you! Your message has been sent successfully. We will get back to you soon.";
+  //     formMessage.className = "form-message success";
 
-      // Reset form
-      contactForm.reset();
+  //     // Reset form
+  //     contactForm.reset();
 
-      // Hide message after 5 seconds
-      setTimeout(() => {
-        formMessage.style.display = "none";
-      }, 5000);
-    }, 1500);
+  //     // Hide message after 5 seconds
+  //     setTimeout(() => {
+  //       formMessage.style.display = "none";
+  //     }, 5000);
+  //   }, 1500);
 
-    // In a real application, you would send the data to a server:
-    // fetch('/api/contact', {
-    //     method: 'POST',
-    //     headers: {
-    //         'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify(data)
-    // })
-    // .then(response => response.json())
-    // .then(result => {
-    //     formMessage.textContent = 'Thank you! Your message has been sent successfully.';
-    //     formMessage.className = 'form-message success';
-    //     contactForm.reset();
-    // })
-    // .catch(error => {
-    //     formMessage.textContent = 'Oops! Something went wrong. Please try again.';
-    //     formMessage.className = 'form-message error';
-    // });
-  });
+  //   // In a real application, you would send the data to a server:
+  //   // fetch('/api/contact', {
+  //   //     method: 'POST',
+  //   //     headers: {
+  //   //         'Content-Type': 'application/json',
+  //   //     },
+  //   //     body: JSON.stringify(data)
+  //   // })
+  //   // .then(response => response.json())
+  //   // .then(result => {
+  //   //     formMessage.textContent = 'Thank you! Your message has been sent successfully.';
+  //   //     formMessage.className = 'form-message success';
+  //   //     contactForm.reset();
+  //   // })
+  //   // .catch(error => {
+  //   //     formMessage.textContent = 'Oops! Something went wrong. Please try again.';
+  //   //     formMessage.className = 'form-message error';
+  //   // });
+  // });
 
   // ===================================
   // NEWSLETTER FORM HANDLING
@@ -301,7 +301,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const email = this.querySelector('input[type="email"]').value;
 
     // Show success message (replace with actual API call)
-    alert("Thank you for subscribing! Welcome to TechVision newsletter.");
+    alert("Thank you for subscribing! Welcome to Mahua Network.");
     this.reset();
 
     // In a real application:
@@ -491,16 +491,12 @@ document.addEventListener("DOMContentLoaded", function () {
   // ===================================
 
   console.log(
-    "%c🚀 TechVision - Premium IT & Marketing Agency",
+    "%c🚀 Mahua Network ",
     "color: #6366f1; font-size: 20px; font-weight: bold; padding: 10px;",
   );
   console.log(
     "%cWebsite crafted with precision and creativity",
     "color: #ec4899; font-size: 14px; padding: 5px;",
-  );
-  console.log(
-    "%cInterested in working with us? Contact: hello@techvision.com",
-    "color: #4ade80; font-size: 12px; padding: 5px;",
   );
 });
 
