@@ -654,13 +654,14 @@ img {
 .float-card span {
     font-weight: 600;
     font-size: 1rem;
-    color: rgb(189, 93, 181);
+    color: rgb(76 144 192);
 }
 
 .card-1 {
     top: 10%;
     left: -10%;
     animation-delay: 0s;
+    color: rgb(10, 78, 37);
 
 }
 
@@ -668,15 +669,18 @@ img {
     top: 50%;
     right: -10%;
     animation-delay: -2s;
-}
+    color: rgb(118, 35, 86);
+}   
 
 .card-3 {
     bottom: 10%;
     left: 10%;
     animation-delay: -4s;
+    color: rgb(39, 8, 109);
 }
 
 .card-4 {
+    color: rgb(192, 54, 54);
     top: 5%;
     right: -10%;
     animation-delay: -6s;
@@ -2228,13 +2232,7 @@ select option {
   background-size: 600% 600%;
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
-  animation: gradientMove 8s ease infinite;
-}
-
-@keyframes gradientMove{
-  0%{background-position:0% 50%;}
-  50%{background-position:100% 50%;}
-  100%{background-position:0% 50%;}
+  animation: gradientMove 7s ease infinite;
 }
 
 .app-subtitle {
