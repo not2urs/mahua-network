@@ -142,6 +142,8 @@ img {
     margin-bottom: 60px;
 }
 
+
+
 .section-tag {
     display: inline-block;
     padding: 8px 20px;
@@ -229,6 +231,7 @@ img {
 /* === NAVIGATION === */
 .navbar {
     position: fixed;
+    height: 100px;
     top: 0;
     left: 0;
     right: 0;
@@ -359,9 +362,10 @@ img {
     bottom: 0;
     z-index: 0;
     background:
-       #0a0707;
+        #0a0707;
 
 }
+
 
 .floating-shapes {
     position: absolute;
@@ -459,6 +463,7 @@ img {
     margin-bottom: 24px;
     line-height: 1.1;
 }
+
 
 .hero-description {
     font-size: 1.25rem;
@@ -577,7 +582,7 @@ img {
     width: 300px;
     height: 300px;
     background-size: cover;
-    background-color: #c5f866;
+    background-color: #f9feff;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -642,14 +647,14 @@ img {
 
 .float-card i {
     font-size: 2rem;
-    color: hsl(233, 33%, 47%);
+    color: rgb(122, 3, 122 47%);
     text-shadow: 0 0 15px rgba(99, 102, 241, 0.7);
 }
 
 .float-card span {
     font-weight: 600;
     font-size: 1rem;
-    color: white;
+    color: rgb(189, 93, 181);
 }
 
 .card-1 {
@@ -732,6 +737,7 @@ img {
     animation: scroll 2s infinite;
 }
 
+
 @keyframes scroll {
     0% {
         opacity: 1;
@@ -778,6 +784,23 @@ img {
 
 .about-image {
     position: relative;
+}
+.about-text h3,
+.about-text p{
+  opacity:0;
+  transform:translateY(30px);
+  animation: textReveal 1s ease forwards;
+}
+
+.about-text p{
+  animation-delay:0.4s;
+}
+
+@keyframes textReveal{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
 
 .image-wrapper {
@@ -854,6 +877,17 @@ img {
     color: white;
 }
 
+
+.feature-icon i,
+.benefit-icon i{
+  animation:pulseIcon 2.5s infinite;
+}
+
+@keyframes pulseIcon{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.15);}
+  100%{transform:scale(1);}
+}
 .feature-content h4 {
     margin-bottom: 8px;
     font-size: 1rem;
@@ -1082,6 +1116,8 @@ img {
     cursor: pointer;
     transition: 0.3s ease;
 }
+
+
 
 /* =================== */
 .image-popup {
@@ -1525,41 +1561,125 @@ img {
     line-height: 1.6;
 }
 
-.social-links {
-    padding: 24px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: var(--radius-md);
+
+.ott-social {
+    font-size: 45px;
+    font-weight: 600;
+    /* font-style: italic; */
+    font-family: sans-serif;
+    margin-top: 40px;
+    color: #fcfafa;
+    letter-spacing: 1px;
+    /* margin-bottom: 30px; */
 }
 
+/* follow text */
 .social-links h4 {
-    margin-bottom: 16px;
-    font-size: 1.125rem;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #fffcfc;
 }
 
+/* icon container */
 .social-icons {
     display: flex;
-    gap: 12px;
+    gap: 15px;
+    align-items: center;
 }
 
+/* icon base style */
 .social-icon {
     width: 45px;
     height: 45px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-secondary);
-    transition: all var(--transition-fast);
+    border-radius: 50%;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    position: relative;
 }
 
+/* brand colors */
+.social-icon:nth-child(1) {
+    background: #1877f2;
+}
+
+/* facebook */
+.social-icon:nth-child(2) {
+    background: #0a66c2;
+}
+
+/* twitter/x */
+.social-icon:nth-child(3) {
+    background: #0a66c2;
+}
+
+/* linkedin */
+.social-icon:nth-child(4) {
+    background: #e4405f;
+}
+
+/* instagram */
+.social-icon:nth-child(5) {
+    background: #ff0000;
+}
+
+/* youtube */
+
+
+/* hover animation */
 .social-icon:hover {
-    background: var(--gradient-primary);
-    color: white;
-    transform: translateY(-3px);
-    border-color: transparent;
+    transform: translateY(-8px) scale(1.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* glow animation */
+.social-icon::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: inherit;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.social-icon:hover::before {
+    transform: scale(1.6);
+    opacity: 0.3;
+}
+
+/* icon animation */
+.social-icon i {
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover i {
+    transform: rotate(10deg) scale(1.2);
+}
+
+.social-icon {
+    animation: floatIcon 4s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+    0% {
+        transform: translateY(0px)
+    }
+
+    50% {
+        transform: translateY(-5px)
+    }
+
+    100% {
+        transform: translateY(0px)
+    }
 }
 
 /* === CONTACT FORM === */
@@ -2001,6 +2121,14 @@ select option {
         justify-content: center;
     }
 
+    .btn i {
+        transition: transform .3s ease;
+    }
+
+    .btn:hover i {
+        transform: translateX(6px);
+    }
+
     .owners-grid,
     .portfolio-grid,
     .benefits-grid {
@@ -2093,11 +2221,20 @@ select option {
 
 }
 
-.app-title {
-    font-size: 48px;
-    color: #fff;
-    margin-bottom: 16px;
-    text-align: center;
+.app-title{
+  font-size: 42px;
+  font-weight: 800;
+  background: linear-gradient(270deg,#200d53,#6366f1,#ec4899,#200d53);
+  background-size: 600% 600%;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation: gradientMove 8s ease infinite;
+}
+
+@keyframes gradientMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
 }
 
 .app-subtitle {
@@ -2115,16 +2252,7 @@ select option {
     text-align: center;
 }
 
-.ott-social {
-    line-height: 4;
-    font-size: 18px;
-    font-weight: 600;
-    color: #f0f0f0;
-    margin-bottom: 20px;
 
-    /* justify-content: flex-start; */
-
-}
 
 .app-btn {
     display: inline-block;
@@ -2148,6 +2276,7 @@ select option {
     gap: 20px;
 }
 
+
 .app-feature {
     background: #fff;
     border-radius: 14px;
@@ -2162,7 +2291,7 @@ select option {
 .app-icon {
     width: 44px;
     height: 44px;
-    background: #6b53ad;
+    background: #200d53;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -2175,6 +2304,61 @@ select option {
     font-weight: 600;
     color: #222;
     margin: 0;
+}
+.app-image img{
+  width:100%;
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage{
+  0%{ transform: translateY(0px);}
+  50%{ transform: translateY(-15px);}
+  100%{ transform: translateY(0px);}
+}
+
+.app-image img{
+  width:100%;
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage{
+  0%{ transform: translateY(0px);}
+  50%{ transform: translateY(-15px);}
+  100%{ transform: translateY(0px);}
+}
+
+.app-image{
+  position:relative;
+}
+
+.app-image::before{
+  content:"";
+  position:absolute;
+  width:120%;
+  height:120%;
+  top:-10%;
+  left:-10%;
+  background: radial-gradient(circle, rgba(94, 56, 104, 0.35), transparent);
+  filter: blur(60px);
+  animation: glowPulse 5s infinite alternate;
+  z-index:-1;
+}
+
+.app-image img{
+  /* width:420px; */
+  max-width:100%;
+  /* height:auto; */
+  /* margin-left: 30px; */
+}
+
+.app-image{
+  display:flex;
+  justify-content:center;
+}
+
+@keyframes glowPulse{
+  from{ transform: scale(0.9);}
+  to{ transform: scale(1.1);}
 }
 
 /* ===== RESPONSIVE ===== */
@@ -2192,13 +2376,19 @@ select option {
         font-size: 36px;
     }
 }
+@media (max-width:768px){
+  .app-image img{
+    width:280px;
+  }
+}
 
 
 /* ott App page 1 */
 .app-stats-section {
     text-align: center;
     margin-top: 2rem;
-    /* padding: 60px 20px; */
+    padding: 60px 20px;
+    background-color:#130b0b
 }
 
 .app-stat-item {
@@ -2500,7 +2690,7 @@ select option {
     width: 70px;
     height: 3px;
     background: #1e5bff;
-    margin: 15px auto 60px;
+    margin: 15px auto 15px;
 }
 
 .app-process-scope .app-process-grid {
@@ -2791,10 +2981,10 @@ select option {
 .image-slider {
     position: relative;
     width: 98%;
-    height:700px;
+    height: 700px;
     overflow: hidden;
     margin: auto;
-    object-fit:contain;
+    object-fit: contain;
     border-radius: 10px;
 }
 
