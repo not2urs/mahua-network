@@ -2193,10 +2193,12 @@ select option {
 
     .cube-face.front {
     transform: translateZ(100px);
+    /* background-image: url("../img/cropped-Mahua-network-scaled-1-1536x1501.png"); */
 }
 
 .cube-face.back {
     transform: rotateY(180deg) translateZ(100px);
+    /* background-image: url("../img/cropped-Mahua-network-scaled-1-1536x1501.png"); */
 }
 
 .cube-face.right {
