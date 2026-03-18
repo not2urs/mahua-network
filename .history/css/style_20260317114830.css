@@ -2075,7 +2075,7 @@ select option {
         height: 301px;
     } */
 
-    .cube-container {
+       .cube-container {
         width: 200px;
         height: 200px;
     }
@@ -2084,12 +2084,11 @@ select option {
         width: 200px;
         height: 200px;
     }
-
     .footer-content {
         grid-template-columns: 1fr 1fr;
     }
 
-    .cube-face.front {
+      .cube-face.front {
         transform: translateZ(100px);
     }
 
@@ -2207,6 +2206,15 @@ select option {
 }
 
 @media (max-width: 480px) {
+    .cube-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .cube-face {
+        width: 200px;
+        height: 200px;
+    }
 
     .hero-visual {
         padding: 20px;
@@ -2225,7 +2233,7 @@ select option {
         width: 45px;
         height: 45px;
     }
-
+ 
 }
 
 
