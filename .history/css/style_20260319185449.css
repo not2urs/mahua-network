@@ -662,7 +662,7 @@ img {
     left: -18%;
     animation-delay: 0s;
     /* color: rgb(10, 78, 37); */
-    color:rgb(199, 24, 24);
+    color:rgb(192, 54, 54);
 
 }
 
@@ -670,8 +670,7 @@ img {
     top: 94%;
     right: -18%;
     animation-delay: -2s;
-    color:rgb(199, 24, 24);
-    /* color: rgb(118, 35, 86); */
+    color: rgb(118, 35, 86);
 }
 
 .card-3 {
@@ -679,12 +678,12 @@ img {
     left: -33%;
     animation-delay: -4s;
     /* color: rgb(39, 8, 109); */
-    color:rgb(199, 24, 24);
+    color:rgb(192, 54, 54);
 }
 
 .card-4 {
     /* color: rgb(192, 54, 54); */
-    color:rgb(199, 24, 24);
+    color:rgb(192, 54, 54);
     top: -30%;
     right: -23%;
     animation-delay: -6s;
@@ -694,7 +693,7 @@ img {
     bottom: -25%;
     right: 10%;
     animation-delay: -8s;
-    
+    rgb(192, 54, 54)
 }
 
 @keyframes floatCard {

@@ -654,15 +654,14 @@ img {
 .float-card span {
     font-weight: 600;
     font-size: 1rem;
-    color: white;
+    color: white ;
 }
 
 .card-1 {
     top: -31%;
     left: -18%;
     animation-delay: 0s;
-    /* color: rgb(10, 78, 37); */
-    color:rgb(199, 24, 24);
+    color: rgb(10, 78, 37);
 
 }
 
@@ -670,21 +669,18 @@ img {
     top: 94%;
     right: -18%;
     animation-delay: -2s;
-    color:rgb(199, 24, 24);
-    /* color: rgb(118, 35, 86); */
+    color: rgb(118, 35, 86);
 }
 
 .card-3 {
     bottom: -19%;
     left: -33%;
     animation-delay: -4s;
-    /* color: rgb(39, 8, 109); */
-    color:rgb(199, 24, 24);
+    color: rgb(39, 8, 109);
 }
 
 .card-4 {
-    /* color: rgb(192, 54, 54); */
-    color:rgb(199, 24, 24);
+    color: rgb(192, 54, 54);
     top: -30%;
     right: -23%;
     animation-delay: -6s;
@@ -694,7 +690,6 @@ img {
     bottom: -25%;
     right: 10%;
     animation-delay: -8s;
-    
 }
 
 @keyframes floatCard {
