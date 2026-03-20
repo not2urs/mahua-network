@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/services.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="../index.html#home">
+                    <div class="logo">
+                        <!-- <i class="fas fa-shopping-cart"></i> -->
+                        <img src="../img/mahua--khabar logo.png" alt="B" class="logo-image">
+                        <span>Mahua Khabar</span>
+                    </div>
+                </a>
+
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="portfolio" id="portfolio">
+        <div class="gallery">
+            <div class="section-header" data-aos="fade-up">
+
+                <span class="section-tag">Our Gallery</span>
+                <p class="section-description">
+                    Welcome to our gallery — a space where we celebrate dynamic events, digital productions, and
+                    creative milestones. Each moment is a reflection of vision, execution, and excellence.
+                </p>
+            </div>
+
+             <div class="image-slider" data-aos="fade-up">
+            <div class="slider-wrapper" id="sliderWrapper">
+
+                <img src="../img/IMG_1.JPG" alt="">
+                <img src="../img/IMG_2.JPG" alt="">
+                <img src="../img/IMG_3.JPG" alt="">
+                <img src="../img/IMG_4.JPG" alt="">
+
+            </div>
+
+            <button class="slider-btn prev" id="prevBtn">&#10094;</button>
+            <button class="slider-btn next" id="nextBtn">&#10095;</button>
+        </div>
+
+            <!-- Popup -->
+            <div class="image-popup" id="imagePopup">
+                <span class="close-btn" onclick="closePopup()">×</span>
+                <img id="popupImg" onclick="closePopup()">
+            </div>
+            <div class="portfolio-grid">
+
+                <!-- image-1 -->
+                <div class="portfolio-item" data-category="web" data-aos="fade-up">
+
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <img src="../img/photo/photo-1.JPG" alt="" onclick="openPopup(this.src)">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- image-2-->
+                <div class="portfolio-item" data-category="app" data-aos="fade-up" data-aos-delay="100">
+
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <img src="../img/photo/photo-2.JPG" alt="" onclick="openPopup(this.src)">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!--image-3 -->
+                <div class="portfolio-item" data-category="marketing" data-aos="fade-up" data-aos-delay="200">
+
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <img src="../img/photo/photo-3.JPG" alt="" onclick="openPopup(this.src)">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!--image-4-->
+                <div class="portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <img src="../img/photo/photo-4.JPG" alt="" onclick="openPopup(this.src)">
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- image-5 -->
+                <div class="portfolio-item" data-category="design" data-aos="fade-up" data-aos-delay="400">
+
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <img src="../img/photo/photo-5.JPG" alt="" onclick="openPopup(this.src)">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- image-6 -->
+                <div class="portfolio-item" data-category="app" data-aos="fade-up" data-aos-delay="500">
+
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <img src="../img/photo/photo-6.JPG" alt="" onclick="openPopup(this.src)">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- image-7 -->
+                <div class="portfolio-item" data-category="ai" data-aos="fade-up" data-aos-delay="500">
+
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <img src="../img/photo/photo-7.JPG" alt="" onclick="openPopup(this.src)">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Image-8 -->
+                <div class="portfolio-item" data-category="ai" data-aos="fade-up" data-aos-delay="500">
+
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <img src="../img/photo/photo-14.JPG" alt="" onclick="openPopup(this.src)">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- image-9  -->
+                <div class="portfolio-item" data-category="ml" data-aos="fade-up" data-aos-delay="500">
+
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <img src="../img/photo/photo-9.JPG" alt="" onclick="openPopup(this.src)">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- image-10  -->
+
+                <div class="portfolio-item" data-category="ml" data-aos="fade-up" data-aos-delay="500">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <img src="../img/photo/photo-10.JPG" alt="" onclick="openPopup(this.src)">
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- image-11  -->
+
+                <div class="portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <img src="../img/photo/photo-11.JPG" alt="" onclick="openPopup(this.src)">
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- image-12 -->
+
+                <div class="portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <img src="../img/photo/photo-12.JPG" alt="" onclick="openPopup(this.src)">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+       
+    </section>
+
+    <script src="../js/main.js"></script>
+    
+</body>
+
+</html>
