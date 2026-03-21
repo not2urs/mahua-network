@@ -36,9 +36,9 @@ if (grid1) {
 }
 
 
-// ======================================
-// PORTFOLIO IMAGES DATA IN Gallery.html
-// ======================================
+// =====================
+// PORTFOLIO IMAGES DATA
+// =====================
 
 
   const portfolioImages = [

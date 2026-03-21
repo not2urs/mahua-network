@@ -1,18 +1,3 @@
-const images = [
-  { src: "img/IMG_1.JPG",  delay: 0 },
-  { src: "img/IMG_2.JPG",  delay: 100 },
-  { src: "img/IMG_3.JPG",  delay: 200 },
-  { src: "img/IMG_4.JPG",  delay: 300 },
-  { src: "img/IMG_5.JPG",  delay: 400 },
-  { src: "img/IMG_6.JPG",  delay: 500 },
-  { src: "img/IMG_7.JPG",  delay: 500 },
-  { src: "img/IMG_8.JPG",  delay: 500 },
-  { src: "img/IMG_9.JPG",  delay: 500 },
-  { src: "img/IMG_10.JPG", delay: 500 },
-  { src: "img/IMG_11.jpg", delay: 300 },
-  { src: "img/IMG_12.JPG", delay: 300 }
-];
-
 const grid1 = document.getElementById("portfolioGrid");
 
 if (grid1) {
@@ -36,9 +21,9 @@ if (grid1) {
 }
 
 
-// ======================================
-// PORTFOLIO IMAGES DATA IN Gallery.html
-// ======================================
+// =====================
+// PORTFOLIO IMAGES DATA
+// =====================
 
 
   const portfolioImages = [

@@ -15,30 +15,28 @@ const images = [
 
 const grid1 = document.getElementById("portfolioGrid");
 
-if (grid1) {
-  images.forEach((img) => {
-    const item = document.createElement("div");
+images.forEach((img) => {
+  const item = document.createElement("div");
+  item.className = "portfolio-item";
+//   item.setAttribute("data-category", img.category);
+  item.setAttribute("data-aos", "fade-up");
+  item.setAttribute("data-aos-delay", img.delay);
 
-    item.className = "portfolio-item";
-    item.setAttribute("data-aos", "fade-up");
-    item.setAttribute("data-aos-delay", img.delay);
+  item.innerHTML = `
+    <div class="portfolio-image">
+        <div class="portfolio-placeholder">
+            <img src="${img.src}" onclick="openPopup('${img.src}')">
+        </div>
+    </div>
+  `;
 
-    item.innerHTML = `
-      <div class="portfolio-image">
-          <div class="portfolio-placeholder">
-              <img src="${img.src}" onclick="openPopup('${img.src}')">
-          </div>
-      </div>
-    `;
-
-    grid1.appendChild(item);
-  });
-}
+  grid1.appendChild(item);
+});
 
 
-// ======================================
-// PORTFOLIO IMAGES DATA IN Gallery.html
-// ======================================
+// =====================
+// PORTFOLIO IMAGES DATA
+// =====================
 
 
   const portfolioImages = [
