@@ -3042,25 +3042,26 @@ select option {
 
 /* gallery inside  */
 .image-slider {
-    position: relative;
-    width: 80%;
-    height: 600px;
-    overflow: hidden;
-    margin: auto;
-    object-fit: cover;
-    border-radius: 10px;
+  position: relative;
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  margin: auto;
+  border-radius: 10px;
 }
 
 .slider-wrapper {
-    display: flex;
-    transition: transform 0.5s ease;
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 100%; /* important */
 }
 
 .slider-wrapper img {
-    width: 80%;
-    flex: 0 0 100%;
-    object-fit: contain;
-    height: 180%;
+  width: 100%;
+  height: 100%;
+  flex: 0 0 100%;
+  object-fit: cover; /* makes image fill without distortion */
+  border-radius: 10px; /* optional if you want rounded corners */
 }
 
 /* Buttons */

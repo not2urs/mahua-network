@@ -3059,7 +3059,7 @@ select option {
 .slider-wrapper img {
     width: 80%;
     flex: 0 0 100%;
-    object-fit: contain;
+    object-fit: fi;
     height: 180%;
 }
 

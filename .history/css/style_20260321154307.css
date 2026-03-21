@@ -1190,6 +1190,10 @@ img {
     opacity: 0.6;
 }
 
+.portfolio-placeholder img{
+    
+}
+
 .portfolio-overlay {
     position: absolute;
     top: 0;
@@ -3043,8 +3047,8 @@ select option {
 /* gallery inside  */
 .image-slider {
     position: relative;
-    width: 80%;
-    height: 600px;
+    width: 100%;
+    /* height: 700px; */
     overflow: hidden;
     margin: auto;
     object-fit: cover;
@@ -3057,10 +3061,10 @@ select option {
 }
 
 .slider-wrapper img {
-    width: 80%;
+    width: 100%;
     flex: 0 0 100%;
-    object-fit: contain;
-    height: 180%;
+    object-fit: cover;
+    height: 100%;
 }
 
 /* Buttons */
