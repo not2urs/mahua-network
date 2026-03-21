@@ -3043,12 +3043,12 @@ select option {
 /* gallery inside  */
 .image-slider {
     position: relative;
-    width: 100%;
-    /* height: 700px; */
+    /* width: 100%;
+    height: 700px;
     overflow: hidden;
     margin: auto;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 10px; */
 }
 
 .slider-wrapper {

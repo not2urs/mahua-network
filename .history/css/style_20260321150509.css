@@ -3047,7 +3047,7 @@ select option {
     /* height: 700px; */
     overflow: hidden;
     margin: auto;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 10px;
 }
 
@@ -3060,7 +3060,6 @@ select option {
     width: 100%;
     flex: 0 0 100%;
     object-fit: cover;
-    height: 100%;
 }
 
 /* Buttons */

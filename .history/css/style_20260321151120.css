@@ -3044,7 +3044,7 @@ select option {
 .image-slider {
     position: relative;
     width: 100%;
-    /* height: 700px; */
+    height: 700px;
     overflow: hidden;
     margin: auto;
     object-fit: cover;

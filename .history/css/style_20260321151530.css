@@ -3057,7 +3057,7 @@ select option {
 }
 
 .slider-wrapper img {
-    width: 100%;
+    width: 60%;
     flex: 0 0 100%;
     object-fit: cover;
     height: 100%;
